@@ -9,7 +9,7 @@
 
 #### Association
 - has_many :stocks
-- has_many :result
+- has_many :results
 
 ### Stocksテーブル 
 |column|Type|Options|
