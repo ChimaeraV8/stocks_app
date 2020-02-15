@@ -1,2 +1,5 @@
 %h1 Stocks#index
-%p Find me in app/views/stocks/index.html.erb
+%p
+ようこそ #{@user} 様
+%p
+  = link_to "ログアウト", destroy_user_session_path, method: "delete"

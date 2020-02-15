@@ -1,5 +1,6 @@
 class StocksController < ApplicationController
   def index
+    @user = current_user.nickname
   end
 
   def new
