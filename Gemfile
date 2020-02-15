@@ -66,3 +66,6 @@ end
 gem 'devise'
 gem 'nokogiri'
 gem 'kaminari'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'haml-rails'
