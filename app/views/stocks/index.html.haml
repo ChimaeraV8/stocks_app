@@ -1,5 +1,8 @@
 %h1 Stocks#index
 %p
-ようこそ #{@user} 様
+  ようこそ
+  = link_to "#{@nickname}", edit_user_registration_path
+  様
 %p
+  
   = link_to "ログアウト", destroy_user_session_path, method: "delete"

@@ -3,5 +3,5 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable,:confirmable,
-        :validatable,password_length: 10..128
+        :validatable,password_length: 8..128
 end
