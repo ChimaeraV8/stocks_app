@@ -1,29 +1,32 @@
 .authform
   %h3
-    Edit #{resource_name.to_s.humanize}
+    登録内容の編集
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f|
     = devise_error_messages!
     .form-group
+      = f.label :nickname,'名前'
+      = f.text_field :nickname, :autofocus => true, class: 'form-control'
+    .form-group
       = f.label :email
-      = f.email_field :email, :autofocus => true, class: 'form-control'
+      = f.email_field :email, class: 'form-control'
       - if devise_mapping.confirmable? && resource.pending_reconfirmation?
         %div
           Currently waiting confirmation for: #{resource.unconfirmed_email}
     %fieldset
-      %p Leave these fields blank if you don't want to change your password.
+      %p パスワードを変更しない場合は入力しないでください
       .form-group
-        = f.label :password
+        = f.label :password,'変更後のパスワード'
         = f.password_field :password, :autocomplete => 'off', class: 'form-control'
       .form-group
         = f.label :password_confirmation
         = f.password_field :password_confirmation, class: 'form-control'
     %fieldset
-      %p You must enter your current password to make changes.
+      %p 変更するにはパスワードの入力が必要です
       .form-group
         = f.label :current_password
         = f.password_field :current_password, class: 'form-control'
-    = f.submit 'Update', :class => 'button right'
+    = f.submit '変更', :class => 'button right'
 .authform
-  %h3 Cancel Account
-  %p Unhappy? We'll be sad to see you go.
-  = button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right'
+  %h3 アカウントの削除
+  %p クリックするとアカウントを削除します
+  = button_to "アカウントを削除", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right'
