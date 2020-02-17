@@ -8,4 +8,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     = csrf_meta_tags
   %body
-    = yield
+    %header{role: "main"}
+      = render 'layouts/messages'
+      = yield
