@@ -1,9 +1,3 @@
 .wrapper
-  .side-bar
-    .side-bar__top-item
-      ようこそ
-      = link_to "#{@nickname}", edit_user_registration_path
-      様
-      = link_to "ログアウト", destroy_user_session_path, method: "delete"
-  .main-screen
-    これはメインに入る
+  = render "side"
+  = render "stocks"
