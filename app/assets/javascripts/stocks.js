@@ -1,0 +1,11 @@
+$(function(){
+  $("a.header-menu").hover(
+    function(){
+      $(this).css("color","#eeeeee"),
+      $(this).css("background-color","#444444")
+    },
+    function(){
+      $(this).css("color","#444444"),
+      $(this).css("background-color","#eeeeee")
+    });
+});
