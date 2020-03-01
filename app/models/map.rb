@@ -1,5 +1,5 @@
 class Map < ApplicationRecord
-  belongs_to :topic
+  belongs_to :user
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 end
