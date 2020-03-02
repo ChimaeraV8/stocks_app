@@ -1,26 +1,23 @@
 %ul{class:'main-screen'}
   %li{class:'main-screen main-screen__title'}
     = link_to "どこそこ検索アプリ",root_path,class:'header-menu header-menu__title'
-  %li{class:'main-screen'}
-    %a{class:'header-menu',href:'#'}
-      検索設定
+    - if user_signed_in?
+      %li{class:'main-screen'}
+        = link_to 'My検索',spots_path,class:'header-menu'
   %li{class:'main-screen'}
     %a{class:'header-menu',href:'/'}
       検索履歴
-  %li{class:'main-screen'}
-    %a{class:'header-menu',href:'#'}
-      ジャンル登録
   %li{class:'main-screen'}
     - if user_signed_in?
       = link_to "ログアウト", destroy_user_session_path, method: "delete",class:'header-menu'
     - else
       = link_to "ログイン",user_session_path,class:'header-menu'
-  %li{class:'main-screen'}
     - if user_signed_in?
-      = link_to "アカウント設定", edit_user_registration_path, class:'header-menu'
+      %li{class:'main-screen'}
+        = link_to "アカウント設定", edit_user_registration_path, class:'header-menu'
   %li{class:'main-screen__user-name'}
     - if user_signed_in?
-      = "ようこそ #{@nickname} 様"
+      = "ようこそ #{@nickname} さん"
     - else
       %p.logout
         ログインしていません
