@@ -1,6 +1,6 @@
 .main-screen__contents
   .map-set
-    = form_with url: root_path do |f|
+    = form_with model: @stock, url: stocks_path do |f|
       .map-set__search-window
         .form-just
           = f.text_field :name,id:'search',value:'南海なんば駅周辺のカフェ'

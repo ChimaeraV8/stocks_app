@@ -6,7 +6,8 @@ function initMap() {
   var myOptions = {
   zoom: 17,//ズーム
   center: initPos,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  gestureHandling: 'greedy',
 };
   myMap = new google.maps.Map(document.getElementById("gmap"),myOptions);
   let request = {

@@ -1,12 +1,11 @@
 class StocksController < ApplicationController
 
   def index
-    if user_signed_in?
-    @nickname = current_user.nickname
-    end
+    @stock = Stock.new
   end
 
   def new
+
   end
 
   def show
@@ -16,5 +15,12 @@ class StocksController < ApplicationController
   end
 
   def create
+    @stock = Stock.create(stock_params)
+  end
+
+  private
+
+  def stock_params
+    params.require(:stock).permit(:name)
   end
 end
