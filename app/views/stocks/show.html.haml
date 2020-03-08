@@ -1,2 +1,11 @@
-%h1 Stocks#show
-%p Find me in app/views/stocks/show.html.erb
+.show-result
+  %h1{class:'show-result__title'}
+    = "#{current_user.nickname}さんの検索履歴"
+  %table
+    - @stocks.reverse_each do |stock|
+      %tr
+        %td{class:'history'}
+          = link_to "#{stock.name}","/stocks/#{current_user.id}/results/#{stock.id}",onclick:'SearchGo()'
+        %td{class:'destroy'}
+          - if user_signed_in? && current_user.id == stock.user_id
+            = link_to '削除',"/stocks/#{stock.id}",method: :delete
