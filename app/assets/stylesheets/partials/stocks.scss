@@ -7,6 +7,10 @@ $headercolor:#eeeeee;
 $contentscolor:#EDE1D5;
 $text-color:#444444;
 
+.header{
+  padding-top:55px;
+}
+
 .wrapper{
   font-family: 'Noto Serif JP', serif;
   width:100%;
@@ -64,7 +68,9 @@ li.main-screen{
   &__user-name{
     text-align:right;
     list-style: none;
-    width:350px;
+    position: absolute;
+    right:0;
+    top:5px;
   }
 }
 .main-screen{
@@ -72,11 +78,17 @@ li.main-screen{
   height:100%;
   &__header{
     height:50px;
+    width:100%;
     background-color: $headercolor;
     border-bottom: 5px solid #808080;
+    position: fixed;
+    top:0;
+    left:0;
+    display: block;
+    z-index: 1;
   }
   &__contents{
-    height:calc(100% - 50px);
+    height:100vh;
     background-color: $contentscolor;
     overflow: scroll;
   }
@@ -99,6 +111,41 @@ li.main-screen{
   line-height: 50px;
   height:100%;
 }
+
+/* ここから検索履歴 */
+.show-result{
+  width:550px;
+  height:100vh;
+  margin:20px auto;
+}
+
+table,tr,td{
+  border:1px solid;
+  line-height: 25px;
+}
+h1.show-result__title{
+  line-height: 35px;
+  text-align: center;
+}
+
+td.history{
+  width:500px;
+}
+
+td.destroy{
+  width:50px;
+  text-align: center;
+}
+
+.textcenter{
+  text-align: center;
+  margin:15px;
+}
+
+.search-show-result{
+  margin-top: 10px;
+}
+
 
 #search{
   height:28px;

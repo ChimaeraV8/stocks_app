@@ -1,2 +1,8 @@
-.wrapper
-  = render "stocks"
+.main-screen__contents
+  .map-set
+    = form_with model: @stock, url: stocks_path do |f|
+      .map-set__search-window
+        .form-just
+          = f.text_field :name,id:'search',value:'南海なんば駅周辺のカフェ'
+          = f.submit '検索',id:'search-button',onclick:'SearchGo()'
+  = render '/shared/map'

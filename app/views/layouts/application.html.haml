@@ -2,11 +2,16 @@
 %html
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Stocks App'
+    %title= content_for?(:title) ? yield(:title) : 'Spot Search'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Stocks App'}"}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     %style @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,900&display=swap&subset=japanese');
     = csrf_meta_tags
   %body
-    = yield
+  .wrapper
+    .main-screen
+      .main-screen__header
+        = render "stocks/header"
+      .header
+        = yield

@@ -6,7 +6,8 @@ function initMap() {
   var myOptions = {
   zoom: 17,//ズーム
   center: initPos,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  gestureHandling: 'greedy',
 };
   myMap = new google.maps.Map(document.getElementById("gmap"),myOptions);
   let request = {
@@ -19,7 +20,7 @@ function initMap() {
 }
 
 function Result_Places(results, status){
-  // Placesが検家に成功したかとマうかをチェック
+  // Placesが検家に成功したかどうかをチェック
   if(status == google.maps.places.PlacesServiceStatus.OK) {
       for (var i = 0; i < results.length; i++) {
           // 検索結果の数だけ反復処理を変数placeに格納
@@ -36,8 +37,9 @@ function SearchGo() {
   var initPos = new google.maps.LatLng(0,0);
   var mapOptions = {
       center : initPos,
-      zoom: 0,
-      mapTypeId : google.maps.MapTypeId.ROADMAP
+      zoom: 10,
+      mapTypeId : google.maps.MapTypeId.ROADMAP,
+      gestureHandling: 'greedy',
   };
   // #map_canva要素にMapクラスの新しいインスタンスを作成
   myMap = new google.maps.Map(document.getElementById("gmap"), mapOptions);
@@ -46,7 +48,7 @@ function SearchGo() {
   var myword = document.getElementById("search");
   var request = {
       query : myword.value,
-      radius : 5000,
+      radius : 400,
       location : myMap.getCenter()
   };
   service.textSearch(request, result_search);
