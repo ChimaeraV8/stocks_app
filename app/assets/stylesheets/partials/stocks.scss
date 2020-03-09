@@ -114,7 +114,7 @@ li.main-screen{
 
 /* ここから検索履歴 */
 .show-result{
-  width:550px;
+  width:350px;
   height:100vh;
   margin:20px auto;
 }
@@ -129,7 +129,8 @@ h1.show-result__title{
 }
 
 td.history{
-  width:500px;
+  width:300px;
+  padding-left:7px;
 }
 
 td.destroy{
@@ -137,9 +138,10 @@ td.destroy{
   text-align: center;
 }
 
-.textcenter{
+.show-result__deatils{
   text-align: center;
   margin:15px;
+  font-size:24px;
 }
 
 .search-show-result{

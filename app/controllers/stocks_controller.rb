@@ -7,6 +7,7 @@ class StocksController < ApplicationController
   def show
     user = Stock.where(user_id: params[:id])
     @stocks = Stock.where(user_id: params[:id])
+    @spots_count = Stock.where(user_id: params[:id]).count
   end
 
   def create
