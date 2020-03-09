@@ -1,4 +1,6 @@
+%body{onload:'SearchGo()'}
 .search-show-result
-  %h1{class:'textcenter'}
-    = @stocks
-  = render '/shared/map'
+%input{value: @stock,type: "hidden",id:'search'}
+  %h1{class:'show-result__deatils'}
+    = @stock
+  = render '/shared/resultmap'
