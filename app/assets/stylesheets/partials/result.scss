@@ -1,0 +1,35 @@
+/* ここから検索履歴 */
+.show-result{
+  width:350px;
+  height:100vh;
+  margin:20px auto;
+}
+
+table,tr,td{
+  border:1px solid;
+  line-height: 25px;
+}
+h1.show-result__title{
+  line-height: 35px;
+  text-align: center;
+}
+
+td.history{
+  width:300px;
+  padding-left:7px;
+}
+
+td.destroy{
+  width:50px;
+  text-align: center;
+}
+
+.show-result__deatils{
+  text-align: center;
+  margin:15px;
+  font-size:24px;
+}
+
+.search-show-result{
+  margin-top: 10px;
+}
