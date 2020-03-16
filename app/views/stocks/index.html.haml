@@ -1,29 +1,5 @@
 .main-screen__contents
   .map-set
-    .map-set__research
-      %p{class:'list-menu'}
-        関西の主要駅から検索:
-      %ul{class:'list-terminal'}
-        %li{class:'terminal-name'}
-          大阪
-        %li{class:'terminal-name'}
-          なんば
-        %li{class:'terminal-name'}
-          天王寺
-        %li{class:'terminal-name'}
-          三宮
-        %li{class:'terminal-name'}
-          京都
-        %li{class:'terminal-name'}
-          姫路
-        %li{class:'terminal-name'}
-          新大阪
-        %li{class:'terminal-name'}
-          京橋
-        %li{class:'terminal-name'}
-          奈良
-        %li{class:'terminal-name'}
-          和歌山
     = form_with model: @stock, url: stocks_path do |f|
       .map-set__search-window
         .form-just

@@ -62,3 +62,93 @@ $text-color:#444444;
   line-height: 50px;
   height:100%;
 }
+
+p.logout{
+  margin-bottom:5px;
+}
+a{
+  text-decoration: none;
+  color:#3453cc;
+  font-weight: bold;
+}
+
+a.header-menu{
+  display:block;
+  width:130px;
+  text-decoration: none;
+  font-weight: bold;
+  color:$text-color;
+  font-size:16px;
+  &__title{
+    width:255px;
+    font-size:20px;
+    line-height: 50px;
+  }
+  &__signup{
+    font-size:14px;
+  }
+}
+
+ul.main-screen{
+  display: flex;
+  padding:0;
+  width:100%;
+}
+
+p.list-menu{
+  font-weight:bold;
+  width:23%;
+}
+
+ul.list-terminal{
+  list-style:none;
+  display:flex;
+}
+
+li.terminal-name{
+  padding-right:20px;
+}
+
+li.main-screen{
+  height:50px;
+  line-height: 50px;
+  list-style:none;
+  text-align: center;
+  border-right: 1px solid #55669E;
+  width: 130px;
+  &__title{
+    width:255px;
+    font-size:20px;
+    line-height: 47px;
+  }
+  &--logout{
+    background-color: #999;
+  }
+  &__user-name{
+    text-align:right;
+    list-style: none;
+    position: absolute;
+    right:0;
+    top:5px;
+  }
+}
+
+.result{
+  &__center{
+    text-align: center;
+    padding-bottom:15px;
+  }
+  &__btn{
+    font-size:16px;
+  }
+}
+
+.comments-area{
+  width:750px;
+  margin:10px auto;
+}
+
+.comments-box{
+  width:700px;
+  height:50px;
+}

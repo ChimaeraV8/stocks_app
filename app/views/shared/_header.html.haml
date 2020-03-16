@@ -1,6 +1,6 @@
 %ul{class:'main-screen'}
   %li{class:'main-screen main-screen__title'}
-    = link_to "スポット検索アプリ",root_path,class:'header-menu header-menu__title'
+    = link_to "施設検索アプリ",root_path,class:'header-menu header-menu__title'
     - if user_signed_in?
       %li{class:'main-screen'}
         = link_to '検索履歴',"/stocks/#{current_user.id}",class:'header-menu'
@@ -18,4 +18,4 @@
     - else
       %p.logout
         ログインしていません
-      = link_to "サインアップ",new_user_registration_path, class:'header-menu__signup'
+      = link_to "アカウント登録",new_user_registration_path, class:'header-menu__signup'
