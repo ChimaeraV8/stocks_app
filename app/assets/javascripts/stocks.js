@@ -9,3 +9,14 @@ $(function(){
       $(this).css("background-color","#eeeeee")
     });
 });
+
+$(function(){
+  $(".delete-link").onclick(
+    function(){
+      if(!confirm('本当に削除しますか？')){
+        return false;
+      }else{
+        location.href="/stocks/#{stock.id}";
+      }
+  })
+});
